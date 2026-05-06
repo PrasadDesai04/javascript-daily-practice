@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p id="para">Hey I am Here on VS code</p>
+        <h3 id="heading">Let's Go deep into coding</h3>
+
+    </div>
+    <div id="msg"></div>
+    <div class="para10"></div>
+
+    <button onclick="changeColour()">change color of text</button>
+    <button onclick="generate()">create heading</button>
+    <button onclick="deleteHeading()">delete heading</button>
+    <button onclick="generate10para()">Generate 10 paragraphs</button>
+    <button onclick="delete10para()">Delete 10 paragraphs</button>
+    <script>
+        let para=document.getElementById("para");
+        let heading=document.getElementById("heading");
+        let contain=document.getElementsByClassName("container");
+        function changeColour(){
+            para.style="color:red"
+            heading.style.backgroundColor="green"
+
+            contain[0].style.backgroundColor="yellow";
+        }
+        let message=document.getElementById('msg');
+        function generate(){
+            let newEl=document.createElement('h1');
+            newEl.innerText="Hare Krishna!!!";
+            newEl.setAttribute("id","heads")
+            message.appendChild(newEl);
+        }
+
+        function deleteHeading(){
+            let ele=document.getElementById("heads")
+            message.removeChild(ele);
+        }
+
+        let para10=document.getElementsByClassName("para10");
+        function generate10para(){
+            for(let i=0;i<10;i++){
+                let newEl=document.createElement('p');
+                newEl.innerText="This is para "+(i+1);
+                para10[0].appendChild(newEl);
+            }
+        }
+
+        function delete10para(){
+            let ele=document.getElementsByClassName("para10");
+            for(let i=0;i<10;i++){
+                ele[0].removeChild(ele[0].lastChild);
+            }
+        }
+    </script>
+</body>
+</html>
