@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Signup Form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .form-container {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        max-width: 500px;
+        width: 100%;
+      }
+
+      .form-header {
+        font-size: 28px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .form-row.full {
+        grid-template-columns: 1fr;
+      }
+
+      label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 8px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+        font-family: inherit;
+        transition: all 0.3s;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+        background-color: #f8f9ff;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .form-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 30px;
+      }
+
+      button {
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      button[type="submit"] {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        grid-column: 1;
+      }
+
+      button[type="submit"]:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+      }
+
+      button[type="reset"] {
+        background: #f0f0f0;
+        color: #333;
+        grid-column: 2;
+      }
+
+      button[type="reset"]:hover {
+        background: #e0e0e0;
+      }
+
+      @media (max-width: 600px) {
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+
+        .form-buttons {
+          grid-template-columns: 1fr;
+        }
+
+        button[type="submit"],
+        button[type="reset"] {
+          grid-column: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-header">Sign Up</div>
+
+      <form action="">
+        <div class="form-group form-row full">
+          <label for="user">Name:</label>
+          <input type="text" id="user" placeholder="Enter your name" required />
+        </div>
+
+        <div class="form-group form-row full">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-group form-row full">
+          <label for="pass">Password:</label>
+          <input type="password" id="pass" placeholder="Create your password" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter your age" />
+          </div>
+
+          <div class="form-group">
+            <label for="subjects">Subject:</label>
+            <select id="subjects">
+              <option value="">Choose a subject</option>
+              <option value="maths">Mathematics</option>
+              <option value="physics">Physics</option>
+              <option value="chem">Chemistry</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="class">Class:</label>
+            <input type="text" id="class" list="class-options" placeholder="Select class" />
+            <datalist id="class-options">
+              <option value="10th">10th</option>
+              <option value="12th">12th</option>
+            </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" placeholder="Enter phone number" />
+          </div>
+        </div>
+
+        <div class="form-group form-row full">
+          <label for="file">Upload a file:</label>
+          <input type="file" id="file" accept=".jpg,.png,.pdf,.doc,.docx,.ppt,.pptx" />
+        </div>
+
+        <div class="form-group form-row full">
+          <label for="address">Address:</label>
+          <textarea id="address" placeholder="Enter your address"></textarea>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit">Sign Up</button>
+          <button type="reset">Clear</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

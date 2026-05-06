@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <link rel="icon" type="image/png" href="image.ico">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+
+        }
+        .header{
+            border: 1px solid black;
+            height: 5vh;
+            background-color: black;
+            color:white;
+        }
+
+        .container{
+            border: 2px solid red;
+            display: flex;
+
+        }
+        .content{
+            border: 1px solid blue;
+            height:90vh;
+            width:75vw;
+            padding:10px;
+        }
+
+        .leftNav{
+            border: 1px solid green;
+            height:90vh;
+            width:25vw;
+        }
+
+        .footer{
+            border: 1px solid black;
+            height:5vh;
+        }
+
+        .navItems{
+            display:flex;
+            list-style:none;
+            align-items:center;
+        }
+
+        .item{
+            margin:10px;
+            font-weight: bold;
+        }
+
+        .leftnavitems{
+            display:flex;
+            list-style:none;
+            flex-direction: column;
+            gap:10px;
+            align-items: center;
+            margin-top:5vh;
+        }
+
+        .leftnaveitem{
+            border: 1px solid blue;
+            width:20vw;
+            padding:20px;
+            border-radius:10px;
+            text-align: center;
+        }
+
+        .leftnaveitem:hover{
+            background-color: black;
+            color:white;
+
+        }
+
+        .footer{
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            background-color: black;
+            color:white;
+
+        }
+
+        .content > img{
+            width:80vw;
+            height: 85%;
+        }
+
+        @media (max-width:600px){
+            .header{
+                height:10vh;
+            }
+            .navItems{
+                flex-wrap: wrap ;
+            }
+            .container{
+                flex-direction: column;
+            }
+            .leftNav{
+                width:100vw;
+            }
+            .leftnaveitem{
+                width:70vw;  
+                margin-top:-10px;
+            }
+            .leftnavitems{
+                margin-top:0px; 
+                margin-bottom: 0px;
+            }
+            .content{
+                width:98vw;
+            }
+
+            .content>img{
+                width:100%; 
+            }
+        }
+
+         
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <ul class="navItems">
+            <li class="item">Home</li>
+            <li class="item">About</li>
+            <li class="item">Media</li>
+            <li class="item">Contact</li>
+            <li class="item">Login</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="leftNav">
+            <ul class="leftnavitems">
+                <li class="leftnaveitem">HTML</li>
+                <li class="leftnaveitem">CSS</li>
+                <li class="leftnaveitem">JavaScript</li>
+                <li class="leftnaveitem">React JS</li>
+                <li class="leftnaveitem">Redux</li>
+                <li class="leftnaveitem">Node JS</li>
+                <li class="leftnaveitem">MongoDB</li>
+                <li class="leftnaveitem">Express</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quisquam dolore ipsam beatae nulla ex possimus sapiente! Deserunt voluptate voluptatum accusantium ratione quam molestias eveniet eius maiores cumque quod iste ex quisquam, tempore expedita, doloremque aspernatur aliquid corporis, distinctio recusandae reiciendis quos consectetur perspiciatis incidunt? Minima enim alias, natus iusto eveniet quas voluptatibus laboriosam accusamus dolores reiciendis. Quod ipsam dolores beatae itaque. Modi fugiat quod maiores nobis! Accusamus commodi, ut sit veniam fugit aliquid, modi facilis esse, cum libero autem reiciendis aut recusandae laudantium ipsa rem asperiores alias consequatur atque. Consequatur voluptatem excepturi odio itaque ea sequi iste nemo mollitia!</p>
+            <img class="images" src="./pexels-robshumski-1903702.jpg" alt="Nature">
+        </div>
+
+    </div>
+
+    <div class="footer">
+        footer
+    </div>
+</body>
+</html>
