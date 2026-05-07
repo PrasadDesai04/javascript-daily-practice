@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=m, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p">This is a sample paragraph to learn about JS events</p>
+    <input type="text" id="input" placeholder="Type something">
+    <button id="btn">Click Me</button>
+    <div id="box" style="width: 100px; height: 100px; background: blue; margin: 20px;"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolores placeat sit adipisci corrupti maiores ipsum, distinctio suscipit enim rerum labore dolorum repudiandae aspernatur autem explicabo beatae laborum, repellat atque cupiditate eaque obcaecati quae voluptates? Esse temporibus deleniti cum minus cumque aut modi in, aspernatur ea tempore, consequuntur recusandae et obcaecati dolore, sint error. Facere, fugiat vitae soluta quos reiciendis cumque tempora magni saepe distinctio commodi laboriosam perspiciatis alias, facilis sapiente dolores! Voluptate incidunt, obcaecati eum exercitationem, nobis impedit nemo dolore accusamus dolorem blanditiis minima rem fugiat inventore illo expedita eligendi voluptates at rerum culpa aperiam enim? Quod et consectetur reprehenderit blanditiis saepe ipsam laboriosam recusandae! Ea sequi sed ipsa enim magnam id vel unde voluptatum veniam rerum fugiat dignissimos neque in, odio eveniet ipsum consequuntur. Ea, quas dolore mollitia ab cum amet fuga quaerat debitis accusantium voluptas praesentium quos facilis? Nobis nemo veritatis dolor quo ut aperiam, alias corporis perspiciatis eveniet, pariatur fuga voluptatem a ipsa id distinctio doloremque ea unde magnam consequatur. Nisi, deserunt dolorum! Magni, sint sed odit animi fugit modi dolorum inventore quia at dolor? Nostrum dicta tenetur dolorum eligendi voluptate dignissimos, neque, vero sunt vel repellat officiis nobis, iusto aspernatur facilis quam. Omnis quaerat, saepe accusantium enim ipsam inventore recusandae hic repellat repudiandae ratione, exercitationem rem cum ea commodi amet. Ad tempore quod a quas qui, distinctio accusamus corporis animi eum incidunt! Recusandae impedit nihil veritatis labore aspernatur sunt voluptate eaque optio dolor qui sint cum natus blanditiis debitis dolorem illo ipsa similique sed non illum eius laborum, nemo saepe? Magnam aliquid labore voluptatum impedit, rem pariatur porro eveniet atque repellendus autem expedita officiis esse id libero? Quos adipisci incidunt tempore minima ipsam laborum dicta earum, ut laudantium nemo consequatur voluptas placeat exercitationem possimus sit perspiciatis autem a asperiores vero, ex inventore ratione deserunt. Consequatur commodi perferendis molestias corrupti enim nobis obcaecati aut sint soluta, quos impedit laudantium sed et accusantium totam nemo dolor. Reiciendis et error qui fuga laborum deserunt quaerat molestias libero molestiae odio porro facilis aliquam minima itaque recusandae tempore, quis beatae, eum laboriosam! Perferendis praesentium aut, veritatis est tenetur repudiandae expedita suscipit iusto molestias cumque nostrum saepe deserunt magnam blanditiis repellat nisi, dolor autem, minima natus voluptas soluta. Commodi veritatis mollitia nemo soluta placeat alias vitae temporibus non quos est necessitatibus repellendus iste molestias, beatae vel atque exercitationem officia maxime a? Optio hic iure esse illo eos dolor est enim architecto labore iste nesciunt libero ipsum dolore, rerum nam deleniti distinctio? Quia, culpa! Ex qui, corporis ab ipsa veritatis ducimus recusandae. Iste tenetur nisi dolores eos. Porro, facere. Voluptatem tempore harum dignissimos in accusantium pariatur aliquam laboriosam corporis eaque sit, ducimus blanditiis a, similique magni voluptate iure sed dolores nemo vel voluptas! Maxime ab fugiat esse tenetur aperiam ad nemo voluptate quo maiores, odio perspiciatis recusandae dolor pariatur praesentium, vero alias est aut reprehenderit beatae enim nulla laborum! Minus facilis tenetur odit laboriosam adipisci aut in, exercitationem magnam neque eum ex laudantium? Consectetur commodi quas praesentium nisi unde deserunt dolor aliquid?</p>
+    <script>
+        // Click Event
+        let p=document.querySelector("p");
+        p.addEventListener("click",function(){
+            alert("You clicked the paragraph")
+        })
+
+        // Load Event
+        window.addEventListener("load",function(){
+            console.log("Page loaded")
+        })
+
+        // Button Click Event
+        let btn = document.querySelector("#btn");
+        btn.addEventListener("click", function(){
+            console.log("Button clicked");
+        })
+
+        // Change Event
+        let input = document.querySelector("#input");
+        input.addEventListener("change", function(){
+            console.log("Input changed: " + this.value);
+        })
+
+        // Input/Keyup Event
+        input.addEventListener("keyup", function(){
+            console.log("Key released: " + this.value);
+        })
+
+        // Keydown Event
+        input.addEventListener("keydown", function(e){
+            console.log("Key pressed: " + e.key);
+        })
+
+        // Mouse Events
+        let box = document.querySelector("#box");
+        box.addEventListener("mouseover", function(){
+            console.log("Mouse over box");
+            this.style.background = "red";
+        })
+
+        box.addEventListener("mouseout", function(){
+            console.log("Mouse out of box");
+            this.style.background = "blue";
+        })
+
+        box.addEventListener("mousedown", function(){
+            console.log("Mouse button pressed");
+        })
+
+        box.addEventListener("mouseup", function(){
+            console.log("Mouse button released");
+        })
+
+        box.addEventListener("mousemove", function(){
+            console.log("Mouse moving over box");
+        })
+
+        // Focus and Blur Events
+        input.addEventListener("focus", function(){
+            console.log("Input focused");
+        })
+
+        input.addEventListener("blur", function(){
+            console.log("Input lost focus");
+        })
+
+        // Scroll Event
+        window.addEventListener("scroll", function(){
+            console.log("Page scrolled");
+        })
+
+        // Resize Event
+        window.addEventListener("resize", function(){
+            console.log("Window resized");
+        })
+
+        // Double Click Event
+        p.addEventListener("dblclick", function(){
+            alert("You double clicked the paragraph");
+        })
+
+        // Submit Event (if form exists)
+        document.addEventListener("submit", function(e){
+            console.log("Form submitted");
+        })
+    </script>
+</body>
+</html>
